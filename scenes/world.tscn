@@ -17,3 +17,4 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 112, 56, 112, 96, 128, 128, 128, 1
 
 [node name="Player" parent="." instance=ExtResource("2_f12bx")]
 position = Vector2(56, 64)
+floor_constant_speed = true

@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702330314
+::res://::1702675514
 icon.svg::CompressedTexture2D::2675644750619721301::1702329011::1702329015::1::::<><>::
 README.md::TextFile::-1::1702329109::0::1::::<><>::
 world.gd::GDScript::-1::1702330067::0::1::::<>Node2D<>::
-world.tscn::PackedScene::1752646945389276288::1702330155::0::1::::<><>::res://world.gd
-::res://scenes/::1702330314
-player.tscn::PackedScene::8819481787320074987::1702330293::0::1::::<><>::uid://beedqiyje3b14::::res://icon.svg
+::res://scenes/::1702677021
+player.gd::GDScript::-1::1702676813::0::1::::<>CharacterBody2D<>::
+player.png::CompressedTexture2D::7549586795308920351::1702677021::1702677021::1::::<><>::
+player.tscn::PackedScene::8819481787320074987::1702676814::0::1::::<><>::uid://beedqiyje3b14::::res://icon.svg<>res://scenes/player.gd
+world.tscn::PackedScene::1752646945389276288::1702676814::0::1::::<><>::res://world.gd<>uid://dxwhtuosxia80::::res://scenes/player.tscn
