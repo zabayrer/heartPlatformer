@@ -93,3 +93,7 @@ position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_g8itc")
 animation = &"run"
 frame_progress = 0.126441
+
+[node name="CoyoteTimeTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
