@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 150.0
-const ACCELERATION = 600.0
-const JUMP_VELOCITY = -300.0
-const FRICTION = 600.0
+@export var SPEED = 150.0
+@export var ACCELERATION = 600.0
+@export var JUMP_VELOCITY = -300.0
+@export var FRICTION = 600.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_time_timer = $CoyoteTimeTimer
