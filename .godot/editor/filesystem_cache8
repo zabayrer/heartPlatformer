@@ -1,10 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706911084
+::res://::1707169294
 icon.svg::CompressedTexture2D::2675644750619721301::1702329011::1702329015::1::::<><>::
 README.md::TextFile::-1::1702329109::0::1::::<><>::
 world.gd::GDScript::-1::1702678014::0::1::::<>Node2D<>::
-::res://scenes/::1702678400
-player.gd::GDScript::-1::1702678091::0::1::::<>CharacterBody2D<>::
+::res://scenes/::1706913108
+player.gd::GDScript::-1::1706913108::0::1::::<>CharacterBody2D<>::
 player.png::CompressedTexture2D::7549586795308920351::1702677021::1702677021::1::::<><>::
-player.tscn::PackedScene::8819481787320074987::1702678400::0::1::::<><>::res://scenes/player.gd<>uid://dftcud1yroetj::::res://scenes/player.png
-world.tscn::PackedScene::1752646945389276288::1702678400::0::1::::<><>::res://world.gd<>uid://dxwhtuosxia80::::res://scenes/player.tscn
+player.tscn::PackedScene::8819481787320074987::1706913108::0::1::::<><>::res://scenes/player.gd<>uid://dftcud1yroetj::::res://scenes/player.png
+player_movement_data.gd::GDScript::-1::1706913108::0::1::::PlayerMovementData<>Resource<>::
+world.tscn::PackedScene::1752646945389276288::1706912822::0::1::::<><>::res://world.gd<>uid://dxwhtuosxia80::::res://scenes/player.tscn

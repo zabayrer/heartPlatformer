@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://dc5p5j1faxrav"]
+
+[ext_resource type="Script" path="res://scenes/player_movement_data.gd" id="1_1doak"]
+
+[resource]
+script = ExtResource("1_1doak")
+speed = 120.0
+acceleration = 1000.0
+jump_velocity = -400.0
+friction = 600.0
