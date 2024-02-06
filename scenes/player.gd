@@ -7,16 +7,16 @@ extends CharacterBody2D
 
 
 var air_jump = false
+var just_wall_jumped = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	apply_gravity(delta)
 
-	# Handle Jump.
-	handle_jump()
+	# Handle Jumps.
 	handle_wall_jump()
-
+	handle_jump()
 	# Get the input input_axis and handle the movement/deceleration.
 	# As good practice, you shouldnt replace UI actions with custom gameplay actions.
 	var input_axis = Input.get_axis("ui_left", "ui_right")
@@ -36,6 +36,8 @@ func _physics_process(delta):
 	if just_left_ledge:
 		coyote_time_timer.start()
 	
+	just_wall_jumped = false
+	
 	
 func apply_gravity(delta):
 	if not is_on_floor():
@@ -54,22 +56,24 @@ func handle_jump():
 		if Input.is_action_just_released("ui_up") and velocity.y < movement_data.jump_velocity/2:
 			velocity.y = movement_data.jump_velocity/2
 		
-		if Input.is_action_just_pressed("ui_up") and air_jump:
+		if Input.is_action_just_pressed("ui_up") and air_jump and not just_wall_jumped:
 			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
 
 func handle_wall_jump():
-	if not is_on_wall():
+	if not is_on_wall_only():
 		return
 	var wall_normal = get_wall_normal()
 	
 	if Input.is_action_just_pressed("ui_left") and wall_normal == Vector2.LEFT:
-		velocity.x = wall_normal.x * movement_data.speed
-		velocity.y = movement_data.jump_velocity
+		velocity.x = wall_normal.x * movement_data.speed * 0.5
+		velocity.y = movement_data.jump_velocity * 1.1
+		just_wall_jumped = true
 	
 	if Input.is_action_just_pressed("ui_right") and wall_normal == Vector2.RIGHT:
-		velocity.x = wall_normal.x * movement_data.speed
-		velocity.y = movement_data.jump_velocity
+		velocity.x = wall_normal.x * movement_data.speed * 0.5
+		velocity.y = movement_data.jump_velocity * 1.1
+		just_wall_jumped = true
 	
 
 
