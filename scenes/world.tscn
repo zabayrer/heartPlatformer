@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://y783sa82ff1a"]
+[gd_scene load_steps=5 format=3 uid="uid://y783sa82ff1a"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_s4mit"]
 [ext_resource type="PackedScene" uid="uid://dxwhtuosxia80" path="res://scenes/player.tscn" id="2_f12bx"]
+[ext_resource type="PackedScene" uid="uid://b5lqbv1un1ixe" path="res://spikes.tscn" id="3_gcc55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdok"]
 size = Vector2(24, 72)
@@ -10,6 +11,7 @@ size = Vector2(24, 72)
 script = ExtResource("1_s4mit")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-13.5, -8)
@@ -19,10 +21,11 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 112, 56, 112, 96, 128, 128, 128, 1
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_f12bx")]
-position = Vector2(56, 64)
+position = Vector2(24, 88)
 floor_constant_speed = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(260, 36)
@@ -32,3 +35,15 @@ shape = SubResource("RectangleShape2D_ykdok")
 offset_left = 248.0
 offset_right = 272.0
 offset_bottom = 72.0
+
+[node name="spikes" parent="." instance=ExtResource("3_gcc55")]
+position = Vector2(152, 136)
+
+[node name="spikes2" parent="." instance=ExtResource("3_gcc55")]
+position = Vector2(168, 136)
+
+[node name="spikes3" parent="." instance=ExtResource("3_gcc55")]
+position = Vector2(288, 120)
+
+[node name="spikes4" parent="." instance=ExtResource("3_gcc55")]
+position = Vector2(304, 120)
