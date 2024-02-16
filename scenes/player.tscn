@@ -106,6 +106,7 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2.08165e-12, -32)
+process_callback = 0
 position_smoothing_enabled = true
 
 [node name="HazardDetector" type="Area2D" parent="."]
